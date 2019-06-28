@@ -2,20 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Slot Machine</title>
+    <title>jQuery Slot Machine</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
 
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css" type="text/css" media="screen" />
-
+    <link rel="stylesheet" href="./dist/jquery.slotmachine.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" />
 
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./dist/slotmachine.js"></script>
-    <!-- <script src="./dist/jquery.slotmachine.js"></script> -->
+    <script src="./dist/jquery.slotmachine.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
@@ -79,7 +79,6 @@ new SlotMachine(planeMachine, {
     return this.nextIndex;
   }
 });
-
 // Using jQuery
 $('#planeMachine2').slotMachine({
   active: 1,
@@ -167,11 +166,9 @@ const el3 = document.querySelector('#machine3');
 const machine1 = new SlotMachine(el1, { active: 0 });
 const machine2 = new SlotMachine(el2, { active: 1 });
 const machine3 = new SlotMachine(el3, { active: 2 });
-
 function onComplete(active){
   results[this.element.id].innerText = `Index: ${this.active}`;
 }
-
 btn.addEventListener('click', () => {
   machine1.shuffle(5, onComplete);
   setTimeout(() => machine2.shuffle(5, onComplete), 500);
@@ -212,7 +209,6 @@ const btnNext = document.querySelector('#watchBtnNext');
 const btnPrev = document.querySelector('#watchBtnPrev');
 const el = document.querySelector('#watch1');
 const watch = new SlotMachine(el, {});
-
 btnPrev.addEventListener('click', () => watch.prev());
 btnNext.addEventListener('click', () => watch.next());
     </script>
@@ -256,7 +252,6 @@ const triky = new SlotMachine(elTriky, {
     return 0;
   }
 });
-
 btnTriky.addEventListener('click', () => triky.shuffle(5));
     </script>
 
@@ -340,7 +335,6 @@ btnShuffle.addEventListener('click', () => {
   mCasino2.shuffle(9999);
   mCasino3.shuffle(9999);
 });
-
 btnStop.addEventListener('click', () => {
   switch(count) {
     case 3:
@@ -383,7 +377,6 @@ $("#textMachine").slotMachine({
 [1, 2, 3, 4, 5, 6].forEach((index) => {
   const script = document.querySelector(`#codeScript${index}`);
   const block = document.querySelector(`#codeBlock${index}`);
-
   block.innerText = script.innerText.replace(/^\n|\n\s*$/g, '');
 });
 hljs.initHighlightingOnLoad();
