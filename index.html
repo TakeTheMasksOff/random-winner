@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Slot Machine</title>
+        <title>BDU Məzun 2019</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0" />
 
@@ -54,87 +54,96 @@
 
     <body>
         <div id="randomize">
-            <div class="container">
-                <h1>Məzun 2019</h1>
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div><img class="logo1" src="BDU.png" alt="" srcset="" /></div>
+                    <div><img class="logo2" src="BDU_2.png" alt="" srcset="" /></div>
+                </div>
 
-                <div class="row justify-content-center  ">
-                    <div class=" d-flex odometer-container p-5">
-                        <div class="odometer-parent mr-2">
-                            <div class="odometer-item">
-                                <div id="machine1" class="randomizeMachine text-center d-none">
-                                    <div>0</div>
-                                    <div>1</div>
-                                    <div>2</div>
-                                    <div>3</div>
+                <div class="common">
+                    <div class="row justify-content-center  ">
+                        <div class=" d-flex odometer-container p-3 electronic">
+                            <div class="odometer-parent mr-2">
+                                <div class="odometer-item">
+                                    <div id="machine1" class="randomizeMachine text-center d-none">
+                                        <div>0</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="odometer-parent mr-2">
-                            <div class="odometer-item">
-                                <div id="machine2" class="randomizeMachine text-center d-none">
-                                    <div>0</div>
-                                    <div>1</div>
-                                    <div>2</div>
-                                    <div>3</div>
-                                    <div>4</div>
-                                    <div>5</div>
-                                    <div>6</div>
-                                    <div>7</div>
-                                    <div>8</div>
-                                    <div>9</div>
+                            <div class="odometer-parent mr-2">
+                                <div class="odometer-item">
+                                    <div id="machine2" class="randomizeMachine text-center d-none">
+                                        <div>0</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="odometer-parent mr-2">
-                            <div class="odometer-item">
-                                <div id="machine3" class="randomizeMachine text-center d-none">
-                                    <div>0</div>
-                                    <div>1</div>
-                                    <div>2</div>
-                                    <div>3</div>
-                                    <div>4</div>
-                                    <div>5</div>
-                                    <div>6</div>
-                                    <div>7</div>
-                                    <div>8</div>
-                                    <div>9</div>
+                            <div class="odometer-parent mr-2">
+                                <div class="odometer-item">
+                                    <div id="machine3" class="randomizeMachine text-center d-none">
+                                        <div>0</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="odometer-parent ">
-                            <div class="odometer-item">
-                                <div id="machine4" class="randomizeMachine text-center d-none">
-                                    <div>0</div>
-                                    <div>1</div>
-                                    <div>2</div>
-                                    <div>3</div>
-                                    <div>4</div>
-                                    <div>5</div>
-                                    <div>6</div>
-                                    <div>7</div>
-                                    <div>8</div>
-                                    <div>9</div>
+                            <div class="odometer-parent ">
+                                <div class="odometer-item">
+                                    <div id="machine4" class="randomizeMachine text-center d-none">
+                                        <div>0</div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="btn-group btn-group-justified" role="group">
-                        <button id="randomizeButton" class="border-0 btn-3d red">
-                            Qalibi seç
-                        </button>
+                    <div class="row justify-content-center">
+                        <div class="btn-group btn-group-justified" role="group">
+                            <button id="randomizeButton" class="border-0 btn-3d red">
+                                Qalibi seçin
+                            </button>
+                        </div>
                     </div>
+                    <div class="row justify-content-center winners  electronic"></div>
                 </div>
-                <div class="row winners mt-4"></div>
             </div>
         </div>
 
-        <div class="admin-panel container">
-            <div class="row">
+        <div class="admin-panel container d-none">
+            <div class="row justify-content-center ">
+                <label for="winners-count">Winners count:</label>
+                <div id="winners-count" class="mx-3">0</div>
+            </div>
+            <div class="row justify-content-center mt-3">
                 <div>
                     <label for="range-from">from</label>
                     <input id="range-from" type="number" />
@@ -144,6 +153,17 @@
                     <input id="range-to" type="number" max="9999" />
                 </div>
                 <button class="ml-4" onclick="setFromTo()">Set</button>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <button class="ml-4" onclick="clearWinners()">Clear previous winners</button>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <button class="ml-4" onclick="excelExport()">Export winners to csv</button>
+                <a id="csv" class="d-none"></a>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <button class="ml-4" onclick="testAddAllWinners()">Test adding 100 winners</button>
+                <a id="csv" class="d-none"></a>
             </div>
         </div>
         <script src="script.js"></script>

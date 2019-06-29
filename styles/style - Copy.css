@@ -25,35 +25,16 @@ body,
     border-bottom-color: #ffffff2e;
     border-radius: 10px;
     background: #242934;
-    margin-bottom: 10px;
-    min-width: 76px;
 }
 
 .title {
     padding-top: 60px;
 }
-.common {
-    position: relative;
-    top: -40px;
-}
-.logo1 {
-    width: 240px;
-    height: auto;
-    margin-left: 35px;
-}
-
-.logo2 {
-    width: 210px;
-    height: auto;
-    margin-right: 65px;
-    padding-top: 15px;
-}
 
 .winners {
-    font-size: 20px;
+    font-size: 60px;
     line-height: 1.3;
-    color: #cfa54e;
-    transform: translateY(15px);
+    color: #baba12;
 }
 
 .btn-3d {
@@ -61,17 +42,17 @@ body,
     outline: 0;
     position: relative;
     display: inline-block;
-    font-size: 35px;
-    padding: 3px 25px;
+    font-size: 50px;
+    padding: 8px 25px;
     color: white !important;
-    margin: 10px 10px;
+    margin: 20px 10px 10px;
     border-radius: 6px;
     text-align: center;
     transition: top 0.01s linear;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 .btn-3d.red:hover {
-    background-color: #242934;
+    background-color: #e74c3c;
 }
 
 .btn-3d:active {
@@ -81,12 +62,12 @@ body,
 
 /* 3D button colors */
 .btn-3d.red {
-    background-color: #242934;
-    box-shadow: 0 0 0 1px #242934 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #404248,
+    background-color: #bc3b2e;
+    box-shadow: 0 0 0 1px #dd3d02 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #842b21,
         0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
 }
 .btn-3d.red:active {
-    box-shadow: 0 0 0 1px #242934 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 1px #c63702 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4);
 }
 
 .winner-btn {
@@ -257,7 +238,7 @@ footer .content {
  */
 #randomize {
     font-size: 90px;
-    background-color: #0c1c32;
+    background-color: #282e3a;
     color: white;
 }
 
@@ -284,12 +265,12 @@ footer .content {
 }
 
 .randomizeMachine {
-    width: 130px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
 }
 
 #randomize .btn-group {
-    /* margin-top: 10px; */
+    margin-top: 10px;
     width: auto;
     margin-bottom: 15px;
 }
