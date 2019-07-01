@@ -1,4 +1,19 @@
-# jQuery-SlotMachine [![Build Status](https://travis-ci.org/josex2r/jQuery-SlotMachine.svg?branch=master)](https://travis-ci.org/josex2r/jQuery-SlotMachine) [![Dependency Status](https://david-dm.org/josex2r/jQuery-SlotMachine.svg)](https://david-dm.org/josex2r/jQuery-SlotMachine) [![devDependency Status](https://david-dm.org/josex2r/jQuery-SlotMachine/dev-status.svg)](https://david-dm.org/josex2r/jQuery-SlotMachine#info=devDependencies)
+# Lottery dedicated Baku State University anniversary
+
+This small project was created to define random winners in lottery. For slot-machine like animation it uses [jQuery-SlotMachine](https://github.com/josex2r/jQuery-SlotMachine)
+
+Each time you click start button it defines new winner. Start time, spin counts of each slot of slot machine defined randomly but overall afeter starting it shows the next winner no more than in 9 seconds. There are 4 slots in slot machine. These parameters are hardcoded but they can be added to admin panel in order to have control over them. It can be accessed throw combination `alt + o`
+
+_Capabilities_:
+
+-   save current winners in localStorage of the browser
+-   restore saved winners after page reloading and browser reopening
+-   clear all previous winners from screen and localStorage
+-   define range of randomly generated numbers
+-   show 100 winners in screen to estimate layot
+-   export winners in csv file
+
+## jQuery-SlotMachine [![Build Status](https://travis-ci.org/josex2r/jQuery-SlotMachine.svg?branch=master)](https://travis-ci.org/josex2r/jQuery-SlotMachine) [![Dependency Status](https://david-dm.org/josex2r/jQuery-SlotMachine.svg)](https://david-dm.org/josex2r/jQuery-SlotMachine) [![devDependency Status](https://david-dm.org/josex2r/jQuery-SlotMachine/dev-status.svg)](https://david-dm.org/josex2r/jQuery-SlotMachine#info=devDependencies)
 
 > :mega: jQuery is not neccessary now! The name it's just legacy.
 
@@ -27,18 +42,18 @@ bower install jquery-slotmachine --save
 
 ```html
 <div id="machine">
-  <div>Madrid</div>
-  <div>London</div>
-  <div>New York</div>
+    <div>Madrid</div>
+    <div>London</div>
+    <div>New York</div>
 </div>
 
 <script>
-const el = document.querySelector('#machine');
-const machine = new SlotMachine(el, {
-  active: 1,
-  delay: 450,
-  auto: 1500
-});
+    const el = document.querySelector('#machine');
+    const machine = new SlotMachine(el, {
+        active: 1,
+        delay: 450,
+        auto: 1500
+    });
 </script>
 ```
 
@@ -46,7 +61,7 @@ const machine = new SlotMachine(el, {
 
 ## Usage
 
-Include the script located in *dist* folder:
+Include the script located in _dist_ folder:
 
 ```html
 <script src="/path/to/slotmachine.min.js"></script>
@@ -56,10 +71,12 @@ Then you can make it work calling the lib in your app:
 
 ```javascript
 const element = document.getElementById('my-machine');
-const machine = new SlotMachine(element, { /* options */ });
+const machine = new SlotMachine(element, {
+    /* options */
+});
 ```
 
-If you preffer jQuery style then import the wrapper *after* the jQuery library:
+If you preffer jQuery style then import the wrapper _after_ the jQuery library:
 
 ```html
 <script src="/path/to/jquery.min.js"></script>
@@ -68,8 +85,10 @@ If you preffer jQuery style then import the wrapper *after* the jQuery library:
 ```
 
 ```javascript
-$(document).ready(function(){
-  $('#my-machine').slotMachine({ /* options */ });
+$(document).ready(function() {
+    $('#my-machine').slotMachine({
+        /* options */
+    });
 });
 ```
 
@@ -79,13 +98,13 @@ Use the first argument of the function to pass an object with the options:
 
 ```javascript
 const machine = new SlotMachine(element, {
-  active: 2,
-  auto: true
+    active: 2,
+    auto: true
 });
 ```
 
 | Name           | Type       | Default       | Description                                                                         |
-|----------------|------------|---------------|-------------------------------------------------------------------------------------|
+| -------------- | ---------- | ------------- | ----------------------------------------------------------------------------------- |
 | **active**     | `Number`   | `0`           | The initial visible element (0 means the first one)                                 |
 | **delay**      | `Number`   | `200`         | Duration (in ms) of each spin                                                       |
 | **auto**       | `Boolean`  | `false`       | Runs the carousel mode when creating the machine                                    |
@@ -98,24 +117,25 @@ const machine = new SlotMachine(element, {
 
 ### Properties
 
-- `machine.nextActive`: Get the next active element (only while shuffling).
-- `machine.nextIndex`: Next element index according to the current direction.
-- `machine.prevIndex`: Prev element index according to the current direction.
-- `machine.random`: Get rando index between the machine bounds.
-- `machine.running`: Check if the machine is running.
-- `machine.stopping`: Check if the machine is stopping.
-- `machine.visible`: Check if the machine is visible.
-- `machine.visibleTile`: Get the current visible element in the machine viewport.
-- `machine.active`: Alias to the `active` setting.
-- `machine.randomize`: Alias to the `randomize` setting.
-- `machine.direction`: Alias to the `direction` setting.
-- `machine.transition`: Alias to the `transition` setting.
+-   `machine.nextActive`: Get the next active element (only while shuffling).
+-   `machine.nextIndex`: Next element index according to the current direction.
+-   `machine.prevIndex`: Prev element index according to the current direction.
+-   `machine.random`: Get rando index between the machine bounds.
+-   `machine.running`: Check if the machine is running.
+-   `machine.stopping`: Check if the machine is stopping.
+-   `machine.visible`: Check if the machine is visible.
+-   `machine.visibleTile`: Get the current visible element in the machine viewport.
+-   `machine.active`: Alias to the `active` setting.
+-   `machine.randomize`: Alias to the `randomize` setting.
+-   `machine.direction`: Alias to the `direction` setting.
+-   `machine.transition`: Alias to the `transition` setting.
 
 ### Methods
 
 `machine.shuffle(spins, callback)`: Starts spining the machine.
-  - spins (`Number`): Optionally set the number of spins.
-  - callback(`Function`): Callback triggered when the machine stops.
+
+-   spins (`Number`): Optionally set the number of spins.
+-   callback(`Function`): Callback triggered when the machine stops.
 
 ```javascript
 // Do a single spin
@@ -131,7 +151,8 @@ machine.shuffle(9999999); // O_O
 ```
 
 `machine.stop(callback)`: Manually stops the machine.
-  - callback(`Function`): Callback triggered when the machine stops.
+
+-   callback(`Function`): Callback triggered when the machine stops.
 
 For example, start spinning the machine and stop it after pressing a button:
 
@@ -139,8 +160,8 @@ For example, start spinning the machine and stop it after pressing a button:
 machine.shuffle(99999);
 // Add the button listener
 myButton.addEventListener('click', () => {
-  // Stop spinning
-  machine.stop();
+    // Stop spinning
+    machine.stop();
 });
 ```
 
