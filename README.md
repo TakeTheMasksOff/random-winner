@@ -1,4 +1,4 @@
-# Lottery dedicated Baku State University anniversary
+# Lottery dedicated Baku State University anniversary!
 
 This small project was created to define random winners in lottery. For slot-machine like animation it uses [jQuery-SlotMachine](https://github.com/josex2r/jQuery-SlotMachine)
 
